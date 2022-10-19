@@ -21,4 +21,6 @@ func main() {
 		log.Fatal(err)
 	}
 	defer config.CloseDB(db)
+
+	config.SetupRoute()
 }
