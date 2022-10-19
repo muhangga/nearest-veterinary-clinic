@@ -7,4 +7,5 @@ type ClinicEntity struct {
 	PhoneNumber string  `json:"phone_number"`
 	Latitude    float64 `json:"latitude"`
 	Longitude   float64 `json:"longitude"`
+	Distance    float64 `json:"distance"`
 }

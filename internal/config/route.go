@@ -26,9 +26,10 @@ func SetupRoute() {
 
 	r := gin.Default()
 
-	clinicsRoute := r.Group("/api/v1/clinics")
+	clinicsRoute := r.Group("/api/v1/clinic")
 	{
 		clinicsRoute.GET("/", handler.ClinicHandler.GetAllClinic)
+		clinicsRoute.GET("/nearby", handler.ClinicHandler.GetNearbyClinic)
 	}
 
 	r.NoRoute(func(ctx *gin.Context) {

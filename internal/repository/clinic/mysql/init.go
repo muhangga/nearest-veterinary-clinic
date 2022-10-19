@@ -8,6 +8,7 @@ import (
 
 type ClinicSQL interface {
 	GetAllClinic() ([]entities.ClinicEntity , error)
+	GetNearbyClinic(lat, long float64) ([]entities.ClinicEntity, error)
 }
 
 type clinicConnection struct {

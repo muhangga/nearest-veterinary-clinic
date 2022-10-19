@@ -7,6 +7,7 @@ import (
 
 type ClinicUsecase interface {
 	GetAllClinic() ([]entities.ClinicEntity, error)
+	GetNearbyClinic(lat, long float64) ([]entities.ClinicEntity, error)
 }
 
 type clinicUsecase struct {

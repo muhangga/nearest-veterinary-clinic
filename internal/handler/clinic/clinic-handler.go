@@ -7,6 +7,7 @@ import (
 
 type ClinicHandler interface {
 	GetAllClinic(c *gin.Context)
+	GetNearbyClinic(c *gin.Context)
 }
 
 type clinicHandler struct {
